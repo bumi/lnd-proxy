@@ -58,10 +58,11 @@ func (l *LNDProxy) WailsInit(runtime *wails.Runtime) error {
 
 	return nil
 }
+
 func (l *LNDProxy) WailsShutdown() {
 	if l.proxy != nil {
 		if err := l.proxy.Shutdown(context.Background()); err != nil {
-			l.log.Warn("Failed to stop proxy server. Not runnig?")
+			l.log.Warn("Failed to stop proxy server. Not running?")
 		}
 	}
 }
@@ -72,7 +73,6 @@ func NewLNDProxy() *LNDProxy {
 }
 
 func main() {
-
 	js := mewn.String("./frontend/build/main.js")
 	css := mewn.String("./frontend/build/main.css")
 
