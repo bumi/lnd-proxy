@@ -20,6 +20,17 @@ requests get proxied to the remote node using the correct certificate.
 
 For more information see: https://github.com/joule-labs/joule-extension/issues/106
 
+## Development
+
+This app uses [wails](https://wails.app) as a Go framework for desktop apps.
+
+    $ wails serve
+    $ cd frontend
+    $ npm run serve
+
+Build:
+
+    $ wails build
 
 ## Download
 
